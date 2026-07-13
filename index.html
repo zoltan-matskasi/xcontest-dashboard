@@ -86,7 +86,7 @@ body{height:auto;overflow:auto;-webkit-overflow-scrolling:touch}
 #map-wrap{width:100%;height:75vw}
 #right-area{overflow:visible;height:auto;border-left:none}
 #chart-wrap{height:200px}
-}</style></head><body><div id="app"><div id="sidebar"><div class="s-head" style="display:flex;align-items:center;justify-content:space-between"><div><div class="s-pilot">&#9992; mats_z</div><div class="s-glider">Matskasi Zoltan - ADVANCE Iota DLS</div></div><button style="width:28px;height:28px;border-radius:6px;border:1px solid #2a3d58;background:#1c2f44;color:#4fc3f7;cursor:pointer;font-size:1.1rem;flex-shrink:0" title="Repulesek frissitese" onclick="var o=document.getElementById('xc-overlay');if(o)o.style.display='flex';"C:\\Users\\matskasi.zoltan\\Documents\\XContest\\repules_frissit.ps1" -Url "xcflights://update?from='+f+'&to='+t+'"\r\n';var b=new Blob([s],{type:'text/plain'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='REPULES_FRISSITES.bat';a.click();d.remove();};d.onclick=function(e){if(e.target===d)d.remove();};})()">&#8635;</button></div><!-- FLIST_START --><div id="flist">
+}</style></head><body><div id="app"><div id="sidebar"><div class="s-head" style="display:flex;align-items:center;justify-content:space-between"><div><div class="s-pilot">&#9992; mats_z</div><div class="s-glider">Matskasi Zoltan - ADVANCE Iota DLS</div></div><button style="width:28px;height:28px;border-radius:6px;border:1px solid #2a3d58;background:#1c2f44;color:#4fc3f7;cursor:pointer;font-size:1.1rem;flex-shrink:0" title="Repulesek frissitese" onclick="openRefreshModal()">&#8635;</button></div><!-- FLIST_START --><div id="flist">
 <div class="fi" id="fi-f15" onclick="selFl('f15')"><div class="fi-row1"><span class="fi-date">2026-07-11</span><span class="fi-tag tag-pt">Hurok</span></div><div class="fi-row2">Nyikom / HU / 1:31h</div><div class="fi-row3"><span class="fi-km">44.849 km</span><span class="fi-pt">44.85 p</span></div></div>
 <div class="fi" id="fi-f0" onclick="selFl('f0')"><div class="fi-row1"><span class="fi-date">2026-05-30</span><span class="fi-tag tag-pt">Hurok</span></div><div class="fi-row2">Revine / IT / 2:13h</div><div class="fi-row3"><span class="fi-km">36.18 km</span><span class="fi-pt">50.66 p</span></div></div>
 <div class="fi" id="fi-f1" onclick="selFl('f1')"><div class="fi-row1"><span class="fi-date">2026-05-29</span><span class="fi-tag tag-pt">Hurok</span></div><div class="fi-row2">Bassano / IT / 5:21h</div><div class="fi-row3"><span class="fi-km">87.74 km</span><span class="fi-pt">122.83 p</span></div></div>
@@ -252,21 +252,6 @@ function xcDoRefresh(){closeRefreshModal();window.location.href="xcflights://upd
     "2026-04-04":{sp:17.38,ma:1600,mc:2.5,la:"Bassano",to:830,bu:[]},
     "2026-04-03":{sp:11.19,ma:1400,mc:2.0,la:"Bassano",to:830,bu:[]},
     "2026-03-08":{sp:6.04,ma:1000,mc:1.5,la:"Pilis",to:300,bu:[]}
-    "2026-05-29":{sp:16.66,ma:1854,mc:4.8,la:"Bassano",to:830,
-      bu:[{n:"Tibor Zakuczi",d:97.16,s:18.70},{n:"Bence Bial",d:82.06,s:18.13},{n:"Stefan S.",d:43.44,s:15.55}]},
-    "2026-05-28":{sp:15.69,ma:2085,mc:3.5,la:"Bassano",to:830,
-      bu:[{n:"Bence Bial",d:82.06,s:18.13},{n:"Drahomir Kuba",d:27.94,s:8.79},{n:"Laszlo Ravasz",d:75.80,s:16.91}]},
-    "2026-05-27":{sp:15.92,ma:1200,mc:2.5,la:"Bassano",to:830,bu:[]},
-    "2026-05-30":{sp:17.73,ma:1500,mc:3.0,la:"Revine",to:1121,bu:[]},
-    "2026-05-26":{sp:13.95,ma:2104,mc:3.6,la:"Revine",to:1121,
-      bu:[{n:"Koppany Beliczay",d:80.25,s:14.14},{n:"Toth Tamas",d:47.35,s:12.74},{n:"Krisztian M.",d:47.88,s:11.08}]},
-    "2026-05-25":{sp:20.27,ma:2757,mc:4.2,la:"Feltre",to:1415,
-      bu:[{n:"Tircsi Andras",d:82.06,s:22.19},{n:"Jozsef Farkas",d:70.40,s:18.83},{n:"Omar M.",d:200.84,s:24.38}]},
-    "2026-05-24":{sp:15.20,ma:1616,mc:2.8,la:"Revine",to:1121,
-      bu:[{n:"Gabor Pete",d:49.41,s:14.21},{n:"Andras Radnai",d:63.84,s:11.65},{n:"Tircsi Andras",d:63.43,s:14.97}]},
-    "2026-04-26":{sp:15.59,ma:1800,mc:3.2,la:"Bassano",to:830,bu:[]},
-    "2026-04-25":{sp:12.99,ma:2000,mc:3.5,la:"Bassano",to:830,bu:[]},
-    "2026-04-24":{sp:18.77,ma:1900,mc:3.8,la:"Bassano",to:830,bu:[]}
   };
   var bc=["#ffd700","#00e5ff","#ff1493"];
   Object.keys(FL).forEach(function(k){
